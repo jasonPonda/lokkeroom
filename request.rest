@@ -1,0 +1,21 @@
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "nickname":"Fred",
+    "email": "Fred@89hotmail.com",
+    "password": "Fred1234"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+ 
+{
+    "email":"Fred@89hotmail.com",
+    "password":"Fred1234"
+}
+
+###
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTUsIm5pY2tuYW1lIjoiRnJlZCIsImVtYWlsIjoiRnJlZEA4OWhvdG1haWwuY29tIiwiaWF0IjoxNjU1MzkwNTE0LCJleHAiOjE2NTUzOTA1MzR9.neUG4YnnZJ_9XQZErt0_rTv_3pSi359ypmFrMkC6IY4
