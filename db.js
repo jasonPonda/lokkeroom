@@ -2,11 +2,11 @@ import pg from 'pg'
 const {Pool} = pg
 
 let localPoolConfig = {
-  user:'jason_admin',
-  password:'123salut!',
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
   host:'localhost',
   port:'5432',
-  database:'lokkeroom'
+  database: process.env.PGDATABASE
 }
 
 const poolConfig = process.env.DATABASE_URL ? {
