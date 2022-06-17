@@ -21,6 +21,8 @@
   "homepage": "https://github.com/jasonPonda/lokkeroom#readme",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
     "@types/jsonwebtoken": "^8.5.8",
     "nodemon": "^2.0.16"
   },

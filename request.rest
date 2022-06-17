@@ -2,18 +2,21 @@ POST http://localhost:5000/api/users
 Content-Type: application/json
 
 {
-    "nickname":"Fred",
-    "email": "Fred@89hotmail.com",
-    "password": "Fred1234"
+    "nickname":"liroy",
+    "email": "liroy@89hotmail.com",
+    "password": "liroy1234"
 }
+
+###
+GET http://localhost:5000/api/users/hello
 
 ###
 POST http://localhost:5000/api/auth/login
 Content-Type: application/json
  
 {
-    "email":"Fred@89hotmail.com",
-    "password":"Fred1234"
+    "email":"liroy@89hotmail.com",
+    "password":"liroy1234"
 }
 
 ###
@@ -25,3 +28,15 @@ GET http://localhost:5000/api/auth/refresh_token
 
 ###
 DELETE http://localhost:5000/api/auth/refresh_token
+
+###
+GET http://localhost:5000/api/users/lobby
+
+###
+GET http://localhost:5000/api/users/lobby/:id
+
+
+
+
+
+

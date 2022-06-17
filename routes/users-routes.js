@@ -24,4 +24,26 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.get('/hello', async (req, res) => {
+    try {
+        const users = await pool.query('SELECT nickname FROM users', [req.body.nickname])
+        res.send(users.rows)
+    } catch (error) {
+        res.status(500).json({error: error.message})
+    }
+    
+})
+
+router.get('/lobby', async (req, res) => {
+    const allLobby = await pool.query(`SELECT * from lobby`);
+
+    res.send(allLobby.rows)
+})
+
+router.get('/lobby/:id', async (req, res) => {
+    const lobbyId = await pool.query(`SELECT id from lobby`);
+
+    res.send(lobbyId.rows)
+})
+
 export default router
