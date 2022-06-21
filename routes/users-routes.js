@@ -7,18 +7,20 @@ const router = express.Router()
 
 router.get('/',authenticateToken, async (req, res) => {
     try{
-        const users = await pool.query('SELECT * FROM users')
+        const users = await pool.query('SELECT id, email, nickname FROM users')
         res.json({user: users.rows})
     } catch (err) {
         res.status(500).json({error: err.message})
     }
 })
 
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         const newUser = await pool.query('INSERT INTO users (nickname, email, password) VALUES ($1,$2,$3) RETURNING *', [req.body.nickname, req.body.email, hashedPassword])
-        res.json({users:newUser.rows[0]})
+        //res.json({users:newUser.rows[0]})
+        if(newUser.rowCount)
+            res.status(200).json({message: 'succes'})
     } catch (err) {
         res.status(500).json({error: err.message})
     }

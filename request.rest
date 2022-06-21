@@ -1,10 +1,10 @@
-POST http://localhost:5000/api/users
+POST http://localhost:5000/api/users/register
 Content-Type: application/json
 
 {
-    "nickname":"liroy",
-    "email": "liroy@89hotmail.com",
-    "password": "liroy1234"
+    "nickname":"timo",
+    "email": "timo@89hotmail.com",
+    "password": "timo1234"
 }
 
 ###
@@ -15,13 +15,13 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
  
 {
-    "email":"liroy@89hotmail.com",
-    "password":"liroy1234"
+    "email":"timo@89hotmail.com",
+    "password":"timo1234"
 }
 
 ###
 GET http://localhost:5000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTUsIm5pY2tuYW1lIjoiRnJlZCIsImVtYWlsIjoiRnJlZEA4OWhvdG1haWwuY29tIiwiaWF0IjoxNjU1MzkwNTE0LCJleHAiOjE2NTUzOTA1MzR9.neUG4YnnZJ_9XQZErt0_rTv_3pSi359ypmFrMkC6IY4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjMsIm5pY2tuYW1lIjoidGltbyIsImVtYWlsIjoidGltb0A4OWhvdG1haWwuY29tIiwiaWF0IjoxNjU1ODAwMDAxLCJleHAiOjE2NTU4MDAwMjF9.CpbSNeHzgWlErCOTmpkrcvw7AbTg3483zEhHQ6fpRps
 
 ###
 GET http://localhost:5000/api/auth/refresh_token
