@@ -36,13 +36,13 @@ router.get('/hello', async (req, res) => {
     
 })
 
-router.get('/lobby', async (req, res) => {
+router.get('/lobby',authenticateToken, async (req, res) => {
     const allLobby = await pool.query(`SELECT * from lobby`);
 
     res.send(allLobby.rows)
 })
 
-router.get('/lobby/:id', async (req, res) => {
+router.get('/lobby/:id',authenticateToken, async (req, res) => {
     const lobbyId = await pool.query(`SELECT id from lobby`);
 
     res.send(lobbyId.rows)
