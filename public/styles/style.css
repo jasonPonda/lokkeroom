@@ -13,7 +13,33 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #4070f4;
+}
+
+.registerPage {
+    position: relative;
+    border: solid 1px black;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.loginPage {
+    position: relative;
+    border: solid 1px black;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
 }
 
 .container{

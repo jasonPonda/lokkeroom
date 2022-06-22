@@ -23,7 +23,13 @@ app.use('/', express.static(join(__dirname, 'public')))
 app.use('/api/users', usersRouter)
 app.use('/api/auth', authRouter)
 
+app.get('/login', (req,res) => {
+    res.sendFile(join(__dirname, 'public/login.html'))
+})
 
+app.get('/register', (req,res) => {
+    res.sendFile(join(__dirname, 'public/register.html'))
+})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`)
